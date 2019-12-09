@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "327855760522",
+    "firebase_url": "https://fir-formedium.firebaseio.com",
+    "project_id": "fir-formedium",
+    "storage_bucket": "fir-formedium.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327855760522:android:39e5b4d4981fbdab6c7973",
+        "android_client_info": {
+          "package_name": "com.example.recyclerviewapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327855760522-h3ppibm47u10s9935cin61k0anj8ol05.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.recyclerviewapp",
+            "certificate_hash": "5e054f933685659efa74e91bee8119ac84a169d8"
+          }
+        },
+        {
+          "client_id": "327855760522-55a3u5i059jpvpo08qo76lc341uq5sud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP0GAH3z0oVo_8YB6kWOYvi1JczHNmnvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327855760522-55a3u5i059jpvpo08qo76lc341uq5sud.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
