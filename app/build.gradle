@@ -44,6 +44,9 @@ dependencies {
     //glide library
     implementation 'com.github.bumptech.glide:glide:4.8.0'
 
+    //cardView
+
+
 
 }
 apply plugin: 'com.google.gms.google-services'

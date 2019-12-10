@@ -1,6 +1,7 @@
 package com.example.recyclerviewapp.ui
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -39,7 +40,10 @@ class MainActivity : AppCompatActivity() {
                     posts.add(post!!)
                 }
 
-                val adapter = NewsListAdapter(posts)
+                val adapter = NewsListAdapter(posts) { view, newsDTO ->
+                    //gonderilecek olan verileri burdan atiyoruz.
+
+                }
                 recyclerView.adapter = adapter
                 adapter.notifyDataSetChanged()
             }
@@ -48,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                 //print error.message
             }
         })
-        }
+    }
 
 
 }
