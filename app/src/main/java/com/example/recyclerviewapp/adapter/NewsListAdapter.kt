@@ -19,9 +19,9 @@ class NewsListAdapter(private val newsList: List<DataDTO>,
         return newsList.size
     }
 
-    override fun onBindViewHolder(holder: NewsListViewHolder, position: Int) {
+        override fun onBindViewHolder(holder: NewsListViewHolder, position: Int) {
         holder.bindTo(newsList[position])
         { view, newsDTO -> onItemClick(view, newsDTO)}
 
-    }
+        }
 }

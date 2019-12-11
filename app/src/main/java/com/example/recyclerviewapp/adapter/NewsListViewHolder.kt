@@ -24,13 +24,14 @@ class NewsListViewHolder(viewGroup: ViewGroup) : RecyclerView.ViewHolder(LayoutI
         //databseden gelene veriyi kendi uygulamammızin içerisine burda yediriyoruz
         txtTitle.text = dataDTO.newtitle
         txtSummary.text = dataDTO.newdescrip
-        //How to add image from DTO to here
+        //fotografı glide kütüphanesi yardimiyla cekip kendi imageimizin icerisine ata
         Glide.with(itemView.context).load(dataDTO.newimageurl).into(image)
 
         itemView.setOnClickListener {
 
             val intent = Intent(it.context, NewsDetailActivity::class.java)
 
+            //Detail sayfasına gonderdigimiz verileri put extra kullanarak göndericez.
             intent.putExtra("newtitle", dataDTO.newtitle);
             intent.putExtra("newdescrip", dataDTO.newdescrip);
             intent.putExtra("newimageurl", dataDTO.newimageurl);
