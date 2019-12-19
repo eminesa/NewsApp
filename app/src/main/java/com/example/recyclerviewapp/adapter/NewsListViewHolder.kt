@@ -18,12 +18,16 @@ class NewsListViewHolder(viewGroup: ViewGroup) : RecyclerView.ViewHolder(LayoutI
     private val txtTitle by lazy { itemView.findViewById<TextView>(R.id.txtNewTitle) }
     private val txtSummary by lazy { itemView.findViewById<TextView>(R.id.txtNewSummary) }
     private val image by lazy { itemView.findViewById<ImageView>(R.id.imageNew) }
+    private val txtData by lazy { itemView.findViewById<TextView>(R.id.txtReleaseDate) }
+
 
     fun bindTo(dataDTO: DataDTO, onItemClick: (view: View, newsDTO: DataDTO) -> Unit) {
 
         //databseden gelene veriyi kendi uygulamammızin içerisine burda yediriyoruz
         txtTitle.text = dataDTO.newtitle
         txtSummary.text = dataDTO.newdescrip
+        txtData.text = dataDTO.releasedate
+
         //fotografı glide kütüphanesi yardimiyla cekip kendi imageimizin icerisine ata
         Glide.with(itemView.context).load(dataDTO.newimageurl).into(image)
 

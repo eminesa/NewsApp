@@ -46,6 +46,15 @@
                 android:maxLines="1"
                 android:textSize="15sp" />
 
+            <TextView
+                android:textColor="@color/light_gray"
+                android:textSize="12sp"
+                android:id="@+id/txtReleaseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtNewSummary"
+                android:layout_alignParentRight="true" />
+
         </RelativeLayout>
 
     </com.google.android.material.card.MaterialCardView>
