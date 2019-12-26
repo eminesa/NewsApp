@@ -20,4 +20,13 @@
         android:layout_below="@+id/searchView"
         android:layout_marginBottom="5dp"></androidx.recyclerview.widget.RecyclerView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+       android:id="@+id/fabButton"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_add"
+        android:layout_height="wrap_content"/>
+
 </RelativeLayout>

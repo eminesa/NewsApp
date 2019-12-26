@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddNewsActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/forImageChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:id="@+id/addNewsImageView"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/ic_load_image" />
+
+
+
+            <Button
+                android:id="@+id/chooseImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/addNewsImageView"
+                android:background="@drawable/button_shape"
+                android:text="Choose image"
+                android:textColor="#FFF " />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/forImageChoose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/addNewsTitleEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/searchview_shape"
+            android:hint="enter news title"
+            android:paddingLeft="20dp"
+            android:paddingRight="8dp" />
+
+        <EditText
+            android:id="@+id/addNewsDescripEditText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/addNewsTitleEditText"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/searchview_shape"
+            android:hint="enter news description"
+            android:paddingLeft="20dp"
+            android:paddingRight="8dp" />
+
+        <Button
+            android:layout_below="@+id/addNewsDescripEditText"
+            android:id="@+id/addNewsFirebaseButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/button_shape"
+            android:padding="5dp"
+            android:text="Add News To list"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+</RelativeLayout>
+</ScrollView>
