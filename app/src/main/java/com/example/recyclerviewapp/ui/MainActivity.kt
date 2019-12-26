@@ -1,15 +1,15 @@
 package com.example.recyclerviewapp.ui
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.recyclerviewapp.R
 import com.example.recyclerviewapp.adapter.NewsListAdapter
 import com.example.recyclerviewapp.dto.DataDTO
-import com.example.recyclerviewapp.R
 import com.google.firebase.database.*
-
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -27,10 +27,13 @@ class MainActivity : AppCompatActivity() {
             this.layoutManager = LinearLayoutManager(this@MainActivity)
         }
         //retrieve data
-        retrieveData();
+        retrieveData()
 
         //for search
         searchView()
+
+        //go to add news activity
+        goAddActivity()
     }
 
 
@@ -60,13 +63,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun searchView() {
-        searchView.setQueryHint("enter news title")
+        searchView.queryHint = "enter news title"
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
             override fun onQueryTextChange(newText: String): Boolean {
 
                 //adapter nasıl cagrilir
-                adapter.getFilter().filter(newText);
+                adapter.getFilter().filter(newText)
 
                 return false
             }
@@ -78,6 +81,14 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+    }
+
+    private fun goAddActivity() {
+
+        fabButton.setOnClickListener {
+            val intent = Intent(it.context, AddNewsActivity::class.java)
+            it.context.startActivity(intent)
+        }
     }
 
 }

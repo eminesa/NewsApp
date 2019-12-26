@@ -17,16 +17,14 @@ class CustomFilter(internal var filterList: ArrayList<DataDTO>, internal var ada
         charSequence = charSequence!!.toString().toLowerCase()
         //kontrol etmek icin
         val results = Filter.FilterResults()
-        //CHECK CONSTRAINT VALIDITY
+
         if (charSequence != null && charSequence.length > 0) {
 
-            //STORE OUR FILTERED PLAYERS
             val filteredPlayers = ArrayList<DataDTO>()
            // for (index in filterList) best practis olarak asagidaki foreach yapisi kullanilir. Diger turlu java ya benzer.
             filterList.forEach {
                 //CHECK
                 if (it.newtitle.toLowerCase().contains(charSequence) || it.newdescrip.toLowerCase().contains(charSequence)) {
-                    //ADD PLAYER TO FILTERED PLAYERS
                     filteredPlayers.add(it)
                 }
             }

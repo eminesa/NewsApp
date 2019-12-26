@@ -4,5 +4,5 @@ package com.example.recyclerviewapp.dto
 class DataDTO(var newtitle: String = "",
               var newimageurl: String = "",
               var newdescrip: String = "",
-              var releasedate: String=""
+              var releasedate: String = ""
 )
